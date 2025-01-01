@@ -1,0 +1,21 @@
+{
+    "name": " ZOOLFAST",
+    "short_name": "ZOOLFAST",
+    "start_url": "/fast",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "logo/IMG_٢٠٢٥٠١٠١_١٢٢٤٠٦_(192_x_192_pixel).jpg",
+        "sizes": "192x192",
+        "type": "logo/"
+      },
+      {
+        "src": "logo/IMG_٢٠٢٥٠١٠١_١٢٢٣٣٤_(512_x_512_pixel).jpg",
+        "sizes": "512x512",
+        "type": "logo/"
+      }
+    ]
+  }
+  

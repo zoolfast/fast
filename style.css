@@ -1,0 +1,403 @@
+/* تنسيق صفحة الويب */
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    padding-bottom: 80px; /* المسافة المطلوبة لظهور الفوتر بشكل مناسب */
+}
+
+/* تنسيق الـ Header */
+header {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* تدرج لوني جذاب */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #fff; /* إضافة حد سفلي لتحديد الـ header */
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* تأثير تغيير اللون عند التحويم */
+}
+
+header nav ul li a:hover {
+    color: #ffeb3b; /* لون أصفر جذاب عند التحويم */
+}
+
+/* تنسيق خانة البحث تحت الـ header */
+#search-bar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 80%; /* جعل محرك البحث أكثر اتساعًا */
+    max-width: 500px; /* حد أقصى للعرض */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search-bar input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #007bff; /* حد أزرق للبحث */
+    border-radius: 25px; /* حواف دائرية لإعطاء مظهر عصري */
+    width: 85%; /* جعل مربع البحث أكثر اتساعًا */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* تأثير عند التحويم */
+}
+
+#search-bar input[type="text"]:focus {
+    border-color: #ffeb3b; /* تغيير اللون إلى الأصفر عند التحديد */
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.7); /* تأثير ضوء عند التركيز على مربع البحث */
+}
+
+#search-bar input[type="text"]::placeholder {
+    color: #bbb; /* لون النص في placeholder */
+}
+
+/* تنسيق للأقسام */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* تنسيق المنتجات */
+#products {
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* استخدام CSS Grid لعرض منتجين في نفس السطر */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* عرض منتجين في نفس السطر */
+    gap: 20px; /* المسافة بين المنتجات */
+    margin-top: 20px;
+    padding: 0px;
+}
+
+.product {
+    background-color: #efefef;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;  /* جعل العناصر تتراكم رأسياً */
+    justify-content: space-between; /* توزيع المحتوى بشكل متساوٍ */
+    height: 100%; /* تعيين ارتفاع المنتج ليتناسب مع العناصر داخله */
+    min-height: 400px; /* تحديد الحد الأدنى للارتفاع لضمان التوازن */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05); /* تأثير تكبير المنتج عند التحويم */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* تأثير الظل عند التحويم */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.05);  /* تكبير الصورة عند التمرير عليها */
+}
+
+.product h3, .product p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: auto;  /* تأكد من وضع الزر في أسفل المنتج */
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+    transform: scale(1.05);  /* تكبير الزر عند التحويم */
+}
+
+#whatsapp-checkout {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    width: 90%;
+}
+
+#whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
+
+#clear-cart-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 70%;
+}
+
+#clear-cart-btn:hover {
+    background-color: #d32f2f;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    #cart {
+        padding: 20px;
+    }
+
+    #cart h2 {
+        font-size: 22px;
+    }
+
+    #cart-table th, #cart-table td {
+        font-size: 18px;
+    }
+
+    #whatsapp-btn, #clear-cart-btn {
+        
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
+/* تحسين الفوتر */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer p {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-images img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.footer-images img:hover {
+    transform: scale(1.1); /* تأثير تكبير الصورة عند التمرير عليها */
+}
+header {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 5px 20px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  font-size: 14px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* تنسيق عام للأزرار */
+button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+    border: none;
+    width: 100%;
+    max-width: 250px; /* الحد الأقصى لعرض الأزرار */
+    margin-top: 10px;
+}
+
+/* زر الشراء */
+.buy-btn {
+    background-color: #28a745; /* لون أخضر */
+    color: white;
+}
+
+.buy-btn:hover {
+    background-color: #218838; /* ظل أخضر داكن عند التحويم */
+    transform: translateY(-3px); /* تأثير رفع الزر */
+}
+
+/* زر البيع */
+.sell-btn {
+    background-color: #ffc107; /* لون أصفر */
+    color: white;
+}
+
+.sell-btn:hover {
+    background-color: #e0a800; /* ظل أصفر داكن عند التحويم */
+    transform: translateY(-3px); /* تأثير رفع الزر */
+}
+
+/* زر الشحن */
+.ship-btn {
+    background-color: #007bff; /* لون أزرق */
+    color: white;
+}
+
+.ship-btn:hover {
+    background-color: #0056b3; /* ظل أزرق داكن عند التحويم */
+    transform: translateY(-3px); /* تأثير رفع الزر */
+}
+
+/* تغيير حجم الأزرار عند الشاشات الصغيرة */
+@media (max-width: 768px) {
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+/* تصغير حجم الحقول المستطيلة */
+input[type="text"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%; /* اجعل العرض 100% من العنصر الأب */
+    max-width: 300px; /* الحد الأقصى للعرض */
+    padding: 8px; /* مسافة داخلية أصغر */
+    font-size: 14px; /* حجم خط أصغر */
+    border: 1px solid #ccc; /* حدود بسيطة */
+    border-radius: 5px; /* زوايا دائرية */
+    box-sizing: border-box; /* حساب الهوامش بشكل دقيق */
+    margin: 10px auto; /* توسيط الحقول بشكل مناسب */
+    display: block; /* جعل العناصر تظهر بشكل متناسق */
+}
+
+/* تحسين مظهر الأزرار */
+button {
+    padding: 10px 20px; /* مسافة داخلية متناسقة */
+    font-size: 14px; /* حجم خط مناسب */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* لون خلفية */
+    color: #fff; /* لون النص */
+    cursor: pointer;
+    width: 100%; /* اجعل الزر يملأ الحاوية */
+    max-width: 300px; /* الحد الأقصى للعرض */
+    margin: 10px auto; /* توسيط الأزرار */
+    display: block; /* التناسق في العرض */
+}
+
+/* تحسين المظهر للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="url"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    button {
+        max-width: 100%; /* اجعل العناصر تملأ الشاشة */
+        padding: 8px; /* تقليل المسافات الداخلية */
+        font-size: 12px; /* تصغير حجم النص قليلاً */
+    }
+}
